@@ -27,23 +27,19 @@
 
 # 2. The Shopping List Maker
 # Objective:
-# The aim of this assignment is to create a program that helps users make a shopping list.
-# Task 1: Write a function that lets the user add items to a list.
-# Task 2: Include a feature to remove items from the list.
-# Task 3: Add a function that prints out the entire list in a formatted way.
-
 def shopping_list_maker():
     shopping_list = []  # Initialize an empty list to store items
-    
+        
     def add_item(item):
-        shopping_list.append(item)  # Add item to the shopping list
-    
+            shopping_list.append(item)  # Add item to the shopping list
+        
     def remove_item(item):
         if item in shopping_list:
             shopping_list.remove(item)  # Remove item from the shopping list
+            print(f"You no longer need {item}.")
         else:
             print(f"{item} is not in the shopping list.")
-    
+        
     def print_list():
         if len(shopping_list) == 0:
             print("Your shopping list is empty.")
@@ -51,22 +47,23 @@ def shopping_list_maker():
             print("Your shopping list:")
             for item in shopping_list:
                 print(item)
- # Allow an input from the user to add, remove, or finish adding items to a list
-    while True:
-        action = input("Enter 'add' to add an item, 'remove' to remove an item, or 'done' to finish: ")
         
-        if action == "add":
+        # Allow an input from the user to add, remove, or finish adding items to a list
+    while True:
+        action = int(input("Enter '1' to add an item, '2' to remove an item, '3' to see your list, or '4' to finish: "))
+            
+        if action == 1:
             item = input("Enter an item to add: ")
             add_item(item)
             print(f"You added {item} to your list.")
-        elif action == "remove":
+        elif action == 2:
             item = input("Enter an item to remove: ")
             remove_item(item)
-            print(f"You no longer need {item}.")
-        elif action == "done":
+        elif action == 3:
+            print_list()
+        elif action == 4:
             print_list()
             break
         else:
-            print("Invalid action. Please try again.")
-
+            print("Invalid action. Please try again. Your number must be between 1 and 4.")
 shopping_list_maker()
