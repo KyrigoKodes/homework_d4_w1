@@ -5,24 +5,24 @@
 # Task 1: Create functions for each arithmetic operation.
 # Task 2: Implement user input to receive numbers and an operation choice.
 # Task 3: Ensure your program can handle division by zero and other potential errors.
-# num1 = int(input("Enter a number: "))
-# num2 = int(input("Enter another number: "))
-# operator = input("Enter an operator (+, -, *, /, %): ")  # Asking the user to enter an operator
-# def arithmetic_operations(num1, num2, operator):
-#     if operator == "+":
-#         return num1 + num2
-#     elif operator == "-":
-#         return num1 - num2
-#     elif operator == "*":
-#         return num1 * num2
-#     elif operator == "/":
-#         return num1 / num2
-#     elif operator == "%":
-#         return num1 % num2
-#     else:
-#         return "Invalid operator"
-# result = arithmetic_operations(num1, num2, operator)  # Calculating the result
-# print(f"{num1} {operator} {num2} = {result}")
+num1 = int(input("Enter a number: "))
+num2 = int(input("Enter another number: "))
+operator = input("Enter an operator (+, -, *, /, %): ")  # Asking the user to enter an operator
+def arithmetic_operations(num1, num2, operator):
+    if operator == "+":
+        return num1 + num2
+    elif operator == "-":
+        return num1 - num2
+    elif operator == "*":
+        return num1 * num2
+    elif operator == "/":
+        return num1 / num2
+    elif operator == "%":
+        return num1 % num2
+    else:
+        return "Invalid operator"
+result = arithmetic_operations(num1, num2, operator)  # Calculating the result
+print(f"{num1} {operator} {num2} = {result}")
 
 
 # 2. The Shopping List Maker
